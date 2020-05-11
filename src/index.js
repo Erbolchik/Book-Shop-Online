@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
-import './index.css';
-import App from './App';
-
+import App from './container/App';
+import 'semantic-ui-css/semantic.min.css'
 import createStore  from './store'
+import './app.css'
 
 const store=createStore()
 
