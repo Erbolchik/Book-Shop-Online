@@ -4,19 +4,18 @@ const initialState = {
 
 export default (state = initialState, action) => {
     switch (action.type) {
-        case 'ADD-BOOK':
+        case 'ADD-TO-CART':
             return {
                 ...state,
                 items: [
                     ...state.items,
                     action.payload]
             }
-        case 'REMOVE-BOOK':
+        case 'REMOVE-FROM-CART':
             return {
                 ...state,
-                items:[
-                    state.items.filter(o=>o.id!==action.payload)
-                ]
+                items:state.items.filter(o=>o.id!==action.payload)
+                
             }
         default:
             return state
